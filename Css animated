@@ -1,0 +1,96 @@
+/* Existing Header Styles (from your previous questions) */
+header {
+    background: linear-gradient(90deg, #004aad, #007bff); /* Vibrant gradient background */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: "Times New Roman", Times, serif;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Lively Logo Animations */
+header img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+    border-radius: 10px; /* Slight rounding for a modern look */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    cursor: pointer;
+}
+
+/* Animate Logo on Page Load */
+header img {
+    animation: slideIn 1s ease-out; /* Slide in from left on load */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Lively Heading Animation */
+header h1 {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and scale change */
+    animation: fadeIn 1.5s ease-out; /* Fade in on load */
+}
+
+header h1:hover {
+    color: #ffd700; /* Bright gold on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation Link Effects */
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none; /* Remove default bullets */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background on hover */
+    transform: translateY(-2px); /* Lift effect */
+    color: #ffd700; /* Gold text on hover */
+}
+
+/* Optional: Pulse Effect for Emphasis (e.g., on a specific nav item) */
+header nav li:first-child a {
+    animation: pulse 2s infinite; /* Pulse effect on the "Home" link */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
