@@ -16,15 +16,23 @@ body {
     padding: 0 20px;
 }
 
-header {
-    background: #004aad;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.header {
+  background-color: #0000ff;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-header .container {
+.header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+section {
+  padding-top: 100px;
+  scroll-margin-top: 100px;
+}tainer {
     display: flex;
     align-items: center;
     gap: 1rem;
