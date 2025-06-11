@@ -16,12 +16,18 @@ body {
     padding: 0 20px;
 }
 
-header {
-    background: #004aad;
-    color: #fff;
-    padding: 1rem 0;
-    top: 0;
-    z-index: 100;
+.header {
+  background-color: #0000ff;
+  height: 80px;
+  position: sticky; /* Or fixed */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* For smooth animation */
+}
+.header.hidden {
+  transform: translateY(-100%); /* Slide up */
+  opacity: 0; /* Fade out */
 }
 header .container {
     display: flex;
