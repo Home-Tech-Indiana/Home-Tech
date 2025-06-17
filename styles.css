@@ -230,7 +230,17 @@ header img:hover {
 header img {
     animation: slideIn 1s ease-out; /* Slide in from left on load */
 }
-
+.logo {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+@media (max-width: 600px) {
+    .logo {
+        max-width: 100px; /* Smaller logo on mobile */
+    }
+}
 @keyframes slideIn {
     from {
         transform: translateX(-50px);
