@@ -449,3 +449,13 @@ header nav li:first-child a {
         max-width: 100%; /* Full width on small screens */
     }
 }
+.blog-post {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+@media (max-width: 600px) {
+    .blog-post {
+        padding: 5px;
+    }
+}
